@@ -23,12 +23,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="What is your weight on Earth?"
         android:inputType="textPersonName|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tw_title" />
 
@@ -52,5 +53,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate_weight" />
+
+    <CheckBox
+        android:id="@+id/cb_Mars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mars"
+        app:layout_constraintEnd_toStartOf="@+id/cb_Venus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cb_Venus" />
+
+    <CheckBox
+        android:id="@+id/cb_Venus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Venus"
+        app:layout_constraintEnd_toStartOf="@+id/cb_Jupiter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_Mars"
+        app:layout_constraintTop_toBottomOf="@+id/tw_title" />
+
+    <CheckBox
+        android:id="@+id/cb_Jupiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jupiter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_Venus"
+        app:layout_constraintTop_toTopOf="@+id/cb_Venus" />
 
 </android.support.constraint.ConstraintLayout>
