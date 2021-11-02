@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        textView_Result.text = savedInstanceState?.getString("result")
 
         cb_Jupiter.setOnClickListener(this)
         cb_Mars.setOnClickListener(this)
@@ -60,6 +60,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         return pound * POUND_TO_KG
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putString("sonuc", textView_Result.text.toString())
     }
 
 
